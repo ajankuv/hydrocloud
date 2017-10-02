@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 import wiringpi as GPIO
+import subprocess
 
 app = Flask(__name__)
 
