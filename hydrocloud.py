@@ -1,21 +1,10 @@
-import socket
+from flask import Flask
 
-HOST, PORT = '', 4200
+app = Flask(__name__)
 
-listen_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-listen_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-listen_socket.bind((HOST, PORT))
-listen_socket.listen(1)
-print 'Serving HTTP on port %s ...' % PORT
-while True:
-    client_connection, client_address = listen_socket.accept()
-    request = client_connection.recv(1024)
-    print request
+@app.route('/')
+def index():
+    return 'Hello world'
 
-    http_response = """\
-HTTP/1.1 200 OK
-
-Hello, World!
-"""
-    client_connection.sendall(http_response)
-    client_connection.close()
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0')
