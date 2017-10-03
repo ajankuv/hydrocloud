@@ -1,8 +1,8 @@
 from flask import Blueprint
 import subprocess
 
-turn_on = Blueprint('on', __name__)
-turn_off = Blueprint('off', __name__)
+on = Blueprint('on', __name__)
+off = Blueprint('off', __name__)
 
 @on.route('/')
 def turn_on():
