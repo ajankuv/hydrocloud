@@ -4,8 +4,8 @@ import subprocess
 #import gpiofunc
 
 app = Flask(__name__)
-app.register_blueprint(turn_on)
-app.register_blueprint(turn_off)
+app.register_blueprint(on, url_prefix='/on')
+app.register_blueprint(on, url_prefix='/off')
 
 
 @app.route('/')
