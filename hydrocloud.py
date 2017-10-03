@@ -9,16 +9,18 @@ def index():
     return render_template('index.html')
 
 @app.route('/main')
-def cakes():
+def main():
     return render_template('main.html')
 
 #setup calls for hardware to set state
 subprocess.call(['./gpio-out.sh'])
 #wiringpi.wiringPiSetupGpio()
 
+@app.route('/pin0on')
 def pin0on():
     subprocess.call(['gpio write 0 1'])
-
+    
+@app.route('/pin0off')
 def pin0off():
     subprocess.call(['gpio write 0 0'])
 
