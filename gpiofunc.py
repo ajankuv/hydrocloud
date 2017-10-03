@@ -1,15 +1,15 @@
-from flask import Flask, render_template
-#import wiringpi as GPIO
+from flask import Blueprint
 import subprocess
 
-app = Flask(__name__)
+turn_on = Blueprint('turn_on', __name__)
+turn_off = Blueprint('turn_off', __name__)
 
-@app.route('/on')
+@turn_on.route('/on')
 def turn_on():
     subprocess.call(['gpio', 'write', '0', '1'])
     return '', 204  # no content
 
-@app.route('/off')
+@turn_off.route('/off')
 def turn_off():
     subprocess.call(['gpio', 'write', '0', '0'])
     return '', 204  # no content
