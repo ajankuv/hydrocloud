@@ -2,6 +2,8 @@ from flask import Flask, render_template
 #import wiringpi as GPIO
 import subprocess
 
+app = Flask(__name__)
+
 @app.route('/on')
 def turn_on():
     subprocess.call(['gpio', 'write', '0', '1'])
