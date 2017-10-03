@@ -11,6 +11,13 @@ def index():
 @app.route('/main')
 def main():
     return render_template('main.html')
+def turn_on():
+    subprocess.call(['gpio write 0 1'])
+    return '', 204  # no content
+def turn_off():
+    subprocess.call(['gpio write 0 0'])
+    return '', 204  # no content
+    
 
 #setup calls for hardware to set state
 subprocess.call(['./gpio-out.sh'])
