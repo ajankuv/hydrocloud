@@ -16,13 +16,15 @@ def main():
 subprocess.call(['./gpio-out.sh'])
 #wiringpi.wiringPiSetupGpio()
 
-@app.route('/pin0on')
-def pin0on():
+@app.route('/0on')
+def turn_on():
     subprocess.call(['gpio write 0 1'])
-    
-@app.route('/pin0off')
-def pin0off():
+    return '', 204  # no content
+
+@app.route('/0off')
+def turn_off():
     subprocess.call(['gpio write 0 0'])
+    return '', 204  # no content
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=4200)
