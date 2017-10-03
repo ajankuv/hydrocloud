@@ -1,8 +1,9 @@
 # hydrocloud
 
 
-python3
 
-python-dev
+requirements
 
-pip install pip install wiringpi
+apt-get install python3
+
+apt-get install wiringpi
