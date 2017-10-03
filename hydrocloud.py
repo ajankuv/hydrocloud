@@ -25,7 +25,7 @@ def turn_off():
 
 #setup calls for hardware to set state
 subprocess.call(['./gpio-out.sh'])
-#wiringpi.wiringPiSetupGpio()
+
 
 
 
