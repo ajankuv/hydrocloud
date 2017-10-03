@@ -5,7 +5,7 @@ import subprocess
 
 app = Flask(__name__)
 app.register_blueprint(on, url_prefix='/on')
-app.register_blueprint(on, url_prefix='/off')
+app.register_blueprint(off, url_prefix='/off')
 
 
 @app.route('/')
