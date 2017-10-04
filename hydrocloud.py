@@ -12,7 +12,7 @@ def index():
 
 @app.route('/main')
 def main():
-    return render_template('main.html')
+    return render_template('overview.html')
 
 #set state for all relays to off
 subprocess.call(['./scripts/gpio-out.sh'])

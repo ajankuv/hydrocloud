@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header"><a class="navbar-brand navbar-link" href="#">hydrocloud.io </a>
+                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            </div>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav">
+                    <li role="presentation"><a href="#">Overview </a></li>
+                    <li role="presentation"><a href="#">Scheduling </a></li>
+                    <li role="presentation"><a href="#">Setup </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="well"><span>System overview - Here you will find options to turn on/off all sockets on command as well as stats you may have configured and hooked up to the raspberry pi.</span></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Outlets #1-4</h3></div>
+                        <div class="panel-body">
+                            <ul></ul>
+                            <div class="btn-group">
+                                <button class="btn btn-default" type="button">Outlet 1</button>
+                                <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"><span class="caret"></span></button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li role="presentation"><a href="{{ url_for('on.turn_on', gpiopin=0) }}">On </a></li>
+                                    <li role="presentation"><a href="{{ url_for('off.turn_off', gpiopin=0) }}">Off </a></li>
+                                    <li role="presentation"><a href="#">Cycle </a></li>
+                                </ul>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-default" type="button">Outlet 2</button>
+                                <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"><span class="caret"></span></button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li role="presentation"><a href="{{ url_for('on.turn_on', gpiopin=1) }}">On </a></li>
+                                    <li role="presentation"><a href="{{ url_for('off.turn_off', gpiopin=1) }}">Off </a></li>
+                                    <li role="presentation"><a href="#">Cycle </a></li>
+                                </ul>
+                            </div>
+                            <ul class="list-group"></ul>
+                            <div class="btn-group">
+                                <button class="btn btn-default" type="button">Outlet 3</button>
+                                <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"><span class="caret"></span></button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li role="presentation"><a href="{{ url_for('on.turn_on', gpiopin=2) }}">On </a></li>
+                                    <li role="presentation"><a href="{{ url_for('off.turn_off', gpiopin=2) }}">Off </a></li>
+                                    <li role="presentation"><a href="">Cycle </a></li>
+                                </ul>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-default" type="button">Outlet 4</button>
+                                <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"><span class="caret"></span></button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li role="presentation"><a href="{{ url_for('on.turn_on', gpiopin=3) }}">On </a></li>
+                                    <li role="presentation"><a href="{{ url_for('off.turn_off', gpiopin=3) }}">Off </a></li>
+                                    <li role="presentation"><a href="#">Cycle </a></li>
+                                </ul>
+                            </div>
+                            <ul></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-md-offset-0">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Atmostphere </h3></div>
+                        <div class="panel-body"><span>Panel Body</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Schedule </h3></div>
+            <div class="panel-body"><span>Panel Body</span></div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
