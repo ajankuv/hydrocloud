@@ -1,6 +1,6 @@
 from flask import Blueprint
 import subprocess
-import requests
+import request
 
 
 on = Blueprint('on', __name__)
