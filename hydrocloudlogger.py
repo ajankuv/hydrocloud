@@ -59,4 +59,4 @@ while True:
 	i += 1
 	time.sleep(5)
 	if i == 3:
-		j = 1/0  # cause an exception to be thrown and the program to exit
+	#	j = 1/0  # cause an exception to be thrown and the program to exit
