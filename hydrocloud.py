@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 from gpiofunc import *
 import subprocess
+import hydrocloud-logger
 
 app = Flask(__name__)
 app.register_blueprint(on)
