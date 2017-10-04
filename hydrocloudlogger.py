@@ -51,12 +51,3 @@ sys.stdout = MyLogger(logger, logging.INFO)
 sys.stderr = MyLogger(logger, logging.ERROR)
 
 i = 0
-
-# Loop forever, doing something useful hopefully:
-while True:
-	logger.info("The counter is now " + str(i))
-	print "This is a print"
-	i += 1
-	time.sleep(5)
-	if i == 3:
-	#	j = 1/0  # cause an exception to be thrown and the program to exit
