@@ -1,8 +1,6 @@
 from flask import Blueprint, request
 import subprocess
 
-
-
 on = Blueprint('on', __name__)
 off = Blueprint('off', __name__)
 
