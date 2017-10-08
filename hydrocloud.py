@@ -2,7 +2,7 @@ from flask import Flask
 from gpiofunc import *
 import subprocess
 import hydrocloudlogger
-import routes
+import routes import *
 
 app = Flask(__name__)
 app.register_blueprint(on)
