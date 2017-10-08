@@ -4,7 +4,7 @@ import subprocess
 import hydrocloudlogger
 import routes
 
-app = Flask(__name__)
+#app = Flask(__name__)
 app.register_blueprint(on)
 app.register_blueprint(off)
 
